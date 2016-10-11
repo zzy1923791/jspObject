@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,47 +8,47 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> pageContext²âÊÔ </title>
+	<title> pageContextæµ‹è¯• </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// Ê¹ÓÃpageContextÉèÖÃÊôĞÔ£¬¸ÃÊôĞÔÄ¬ÈÏÔÚpage·¶Î§ÄÚ
+// ä½¿ç”¨pageContextè®¾ç½®å±æ€§ï¼Œè¯¥å±æ€§é»˜è®¤åœ¨pageèŒƒå›´å†…
 pageContext.setAttribute("page","hello");
-// Ê¹ÓÃrequestÉèÖÃÊôĞÔ£¬¸ÃÊôĞÔÄ¬ÈÏÔÚrequest·¶Î§ÄÚ
+// ä½¿ç”¨requestè®¾ç½®å±æ€§ï¼Œè¯¥å±æ€§é»˜è®¤åœ¨requestèŒƒå›´å†…
 request.setAttribute("request","hello");
-// Ê¹ÓÃpageContext½«ÊôĞÔÉèÖÃÔÚrequest·¶Î§ÖĞ
+// ä½¿ç”¨pageContextå°†å±æ€§è®¾ç½®åœ¨requestèŒƒå›´ä¸­
 pageContext.setAttribute("request2","hello" 
 	, pageContext.REQUEST_SCOPE);
-// Ê¹ÓÃsession½«ÊôĞÔÉèÖÃÔÚsession·¶Î§ÖĞ
+// ä½¿ç”¨sessionå°†å±æ€§è®¾ç½®åœ¨sessionèŒƒå›´ä¸­
 session.setAttribute("session","hello");
-// Ê¹ÓÃpageContext½«ÊôĞÔÉèÖÃÔÚsession·¶Î§ÖĞ
+// ä½¿ç”¨pageContextå°†å±æ€§è®¾ç½®åœ¨sessionèŒƒå›´ä¸­
 pageContext.setAttribute("session2","hello" 
 	, pageContext.SESSION_SCOPE);
-// Ê¹ÓÃapplication½«ÊôĞÔÉèÖÃÔÚapplication·¶Î§ÖĞ
+// ä½¿ç”¨applicationå°†å±æ€§è®¾ç½®åœ¨applicationèŒƒå›´ä¸­
 application.setAttribute("app","hello");
-// Ê¹ÓÃpageContext½«ÊôĞÔÉèÖÃÔÚapplication·¶Î§ÖĞ
+// ä½¿ç”¨pageContextå°†å±æ€§è®¾ç½®åœ¨applicationèŒƒå›´ä¸­
 pageContext.setAttribute("app2","hello" 
 	, pageContext.APPLICATION_SCOPE);
-//ÏÂÃæ»ñÈ¡¸÷ÊôĞÔËùÔÚµÄ·¶Î§£º
-out.println("page±äÁ¿ËùÔÚ·¶Î§£º" + 
+//ä¸‹é¢è·å–å„å±æ€§æ‰€åœ¨çš„èŒƒå›´ï¼š
+out.println("pageå˜é‡æ‰€åœ¨èŒƒå›´ï¼š" + 
 	pageContext.getAttributesScope("page") + "<br/>");
-out.println("request±äÁ¿ËùÔÚ·¶Î§£º" +
+out.println("requestå˜é‡æ‰€åœ¨èŒƒå›´ï¼š" +
 	pageContext.getAttributesScope("request") + "<br/>");
-out.println("request2±äÁ¿ËùÔÚ·¶Î§£º"+
+out.println("request2å˜é‡æ‰€åœ¨èŒƒå›´ï¼š"+
 	pageContext.getAttributesScope("request2") + "<br/>");
-out.println("session±äÁ¿ËùÔÚ·¶Î§£º" +
+out.println("sessionå˜é‡æ‰€åœ¨èŒƒå›´ï¼š" +
 	pageContext.getAttributesScope("session") + "<br/>");
-out.println("session2±äÁ¿ËùÔÚ·¶Î§£º" +
+out.println("session2å˜é‡æ‰€åœ¨èŒƒå›´ï¼š" +
 	pageContext.getAttributesScope("session2") + "<br/>");
-out.println("app±äÁ¿ËùÔÚ·¶Î§£º" +
+out.println("appå˜é‡æ‰€åœ¨èŒƒå›´ï¼š" +
 	pageContext.getAttributesScope("app") + "<br/>");
-out.println("app2±äÁ¿ËùÔÚ·¶Î§£º" + 
+out.println("app2å˜é‡æ‰€åœ¨èŒƒå›´ï¼š" + 
 	pageContext.getAttributesScope("app2") + "<br/>");
 %>
 </body>

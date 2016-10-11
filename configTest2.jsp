@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,18 +8,18 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>²âÊÔconfigÄÚÖÃ¶ÔÏó</title>
+	<title>æµ‹è¯•configå†…ç½®å¯¹è±¡</title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
-<!-- Êä³ö¸ÃJSPÃûÎªnameµÄÅäÖÃ²ÎÊý -->
-nameÅäÖÃ²ÎÊýµÄÖµ:<%=config.getInitParameter("name")%><br/>
-<!-- Êä³ö¸ÃJSPÃûÎªageµÄÅäÖÃ²ÎÊý -->
-ageÅäÖÃ²ÎÊýµÄÖµ:<%=config.getInitParameter("age")%>
+<!-- è¾“å‡ºè¯¥JSPåä¸ºnameçš„é…ç½®å‚æ•° -->
+nameé…ç½®å‚æ•°çš„å€¼:<%=config.getInitParameter("name")%><br/>
+<!-- è¾“å‡ºè¯¥JSPåä¸ºageçš„é…ç½®å‚æ•° -->
+ageé…ç½®å‚æ•°çš„å€¼:<%=config.getInitParameter("age")%>
 </body>
 </html>

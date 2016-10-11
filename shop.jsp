@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,20 +8,20 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <!DOCtype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> Ñ¡ÔñÎïÆ·¹ºÂò </title>
+	<title> é€‰æ‹©ç‰©å“è´­ä¹° </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <form method="post" action="processBuy.jsp">
-	Êé¼®£º<input type="checkbox" name="item" value="book"/><br/>
-	µçÄÔ£º<input type="checkbox" name="item" value="computer"/><br/>
-	Æû³µ£º<input type="checkbox" name="item" value="car"/><br/>
-	<input type="submit" value="¹ºÂò"/>
+	ä¹¦ç±ï¼š<input type="checkbox" name="item" value="book"/><br/>
+	ç”µè„‘ï¼š<input type="checkbox" name="item" value="computer"/><br/>
+	æ±½è½¦ï¼š<input type="checkbox" name="item" value="car"/><br/>
+	<input type="submit" value="è´­ä¹°"/>
 </form>
 </body>
 </html>

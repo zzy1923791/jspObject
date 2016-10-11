@@ -1,59 +1,59 @@
-<%@ page contentType="text/html; charset=gb2312" language="java" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" %>
 <%@ page import="java.util.*"%>
 <%
-//È¡³ösession·¶Î§µÄitemMapÊôĞÔ
+//å–å‡ºsessionèŒƒå›´çš„itemMapå±æ€§
 Map<String,Integer> itemMap = (Map<String,Integer>)session
 	.getAttribute("itemMap");
-//Èç¹ûMap¶ÔÏóÎª¿Õ£¬Ôò³õÊ¼»¯Map¶ÔÏó
+//å¦‚æœMapå¯¹è±¡ä¸ºç©ºï¼Œåˆ™åˆå§‹åŒ–Mapå¯¹è±¡
 if (itemMap == null)
 {
 	itemMap = new HashMap<String,Integer>();
-	itemMap.put("Êé¼®" , 0);
-	itemMap.put("µçÄÔ" , 0);
-	itemMap.put("Æû³µ" , 0);
+	itemMap.put("ä¹¦ç±" , 0);
+	itemMap.put("ç”µè„‘" , 0);
+	itemMap.put("æ±½è½¦" , 0);
 }
-//»ñÈ¡ÉÏ¸öÒ³ÃæµÄÇëÇó²ÎÊı
+//è·å–ä¸Šä¸ªé¡µé¢çš„è¯·æ±‚å‚æ•°
 String[] buys = request.getParameterValues("item");
-//±éÀúÊı×éµÄ¸÷ÔªËØ
+//éå†æ•°ç»„çš„å„å…ƒç´ 
 for (String item : buys)
 {
-	//Èç¹ûitemÎªbook£¬±íÊ¾Ñ¡Ôñ¹ºÂòÊé¼®
+	//å¦‚æœitemä¸ºbookï¼Œè¡¨ç¤ºé€‰æ‹©è´­ä¹°ä¹¦ç±
 	if(item.equals("book"))
 	{
-		int num1 = itemMap.get("Êé¼®").intValue();
-		//½«Êé¼®key¶ÔÓ¦µÄÊıÁ¿¼Ó1
-		itemMap.put("Êé¼®" , num1 + 1);
+		int num1 = itemMap.get("ä¹¦ç±").intValue();
+		//å°†ä¹¦ç±keyå¯¹åº”çš„æ•°é‡åŠ 1
+		itemMap.put("ä¹¦ç±" , num1 + 1);
 	}
-	//Èç¹ûitemÎªcomputer£¬±íÊ¾Ñ¡Ôñ¹ºÂòµçÄÔ
+	//å¦‚æœitemä¸ºcomputerï¼Œè¡¨ç¤ºé€‰æ‹©è´­ä¹°ç”µè„‘
 	else if (item.equals("computer"))
 	{
-		int num2 = itemMap.get("µçÄÔ").intValue();
-		//½«µçÄÔkey¶ÔÓ¦µÄÊıÁ¿¼Ó1
-		itemMap.put("µçÄÔ" , num2 + 1);
+		int num2 = itemMap.get("ç”µè„‘").intValue();
+		//å°†ç”µè„‘keyå¯¹åº”çš„æ•°é‡åŠ 1
+		itemMap.put("ç”µè„‘" , num2 + 1);
 	}
-	//Èç¹ûitemÎªcar£¬±íÊ¾Ñ¡Ôñ¹ºÂòÆû³µ
+	//å¦‚æœitemä¸ºcarï¼Œè¡¨ç¤ºé€‰æ‹©è´­ä¹°æ±½è½¦
 	else if (item.equals("car"))
 	{
-		int num3 = itemMap.get("Æû³µ").intValue();
-		//½«Æû³µkey¶ÔÓ¦µÄÊıÁ¿¼Ó1
-		itemMap.put("Æû³µ" , num3 + 1);
+		int num3 = itemMap.get("æ±½è½¦").intValue();
+		//å°†æ±½è½¦keyå¯¹åº”çš„æ•°é‡åŠ 1
+		itemMap.put("æ±½è½¦" , num3 + 1);
 	}
 }
-//½«itemMap¶ÔÏó·Åµ½ÉèÖÃ³Ésession·¶Î§µÄitemMapÊôĞÔ
+//å°†itemMapå¯¹è±¡æ”¾åˆ°è®¾ç½®æˆsessionèŒƒå›´çš„itemMapå±æ€§
 session.setAttribute("itemMap" , itemMap);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> ¹ºÂòµÄÎïÆ·ÁĞ±í </title>
+	<title> è´­ä¹°çš„ç‰©å“åˆ—è¡¨ </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
-ÄúËù¹ºÂòµÄÎïÆ·£º<br/>
-Êé¼®£º<%=itemMap.get("Êé¼®")%>±¾<br/>
-µçÄÔ£º<%=itemMap.get("µçÄÔ")%>Ì¨<br/>
-Æû³µ£º<%=itemMap.get("Æû³µ")%>Á¾
-<p><a href="shop.jsp">ÔÙ´Î¹ºÂò</a></p>
+æ‚¨æ‰€è´­ä¹°çš„ç‰©å“ï¼š<br/>
+ä¹¦ç±ï¼š<%=itemMap.get("ä¹¦ç±")%>æœ¬<br/>
+ç”µè„‘ï¼š<%=itemMap.get("ç”µè„‘")%>å°<br/>
+æ±½è½¦ï¼š<%=itemMap.get("æ±½è½¦")%>è¾†
+<p><a href="shop.jsp">å†æ¬¡è´­ä¹°</a></p>
 </body>
 </html>

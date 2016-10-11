@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,28 +8,28 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> request´¦Àí </title>
+	<title> requestå¤„ç† </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// È¡³öÇëÇó²ÎÊı
+// å–å‡ºè¯·æ±‚å‚æ•°
 String bal = request.getParameter("balance");
 double qian = Double.parseDouble(bal);
-// È¡³örequest·¶Î§ÄÚµÄinfoÊôĞÔ
+// å–å‡ºrequestèŒƒå›´å†…çš„infoå±æ€§
 List<String> info  = (List<String>)request.getAttribute("info");
 for (String tmp : info)
 {
 	out.println(tmp + "<br/>");
 }
-out.println("È¡Ç®" + qian + "¿é");
-out.println("ÕË»§¼õÉÙ" + qian);
+out.println("å–é’±" + qian + "å—");
+out.println("è´¦æˆ·å‡å°‘" + qian);
 %>
 </body>
 </html>

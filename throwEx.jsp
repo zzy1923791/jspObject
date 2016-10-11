@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -7,13 +7,13 @@ This program is protected by copyright laws.
 Program Name:
 Date: 
 --%>
-<!-- Í¨¹ýerrorPageÊôÐÔÖ¸¶¨Òì³£´¦ÀíÒ³Ãæ -->
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="error.jsp" %>
+<!-- é€šè¿‡errorPageå±žæ€§æŒ‡å®šå¼‚å¸¸å¤„ç†é¡µé¢ -->
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="error.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> JSP½Å±¾µÄÒì³£»úÖÆ </title>
+	<title> JSPè„šæœ¬çš„å¼‚å¸¸æœºåˆ¶ </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>

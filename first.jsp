@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,38 +8,38 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> request´¦Àí </title>
+	<title> requestå¤„ç† </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// »ñÈ¡ÇëÇóµÄÇ®Êı
+// è·å–è¯·æ±‚çš„é’±æ•°
 String bal = request.getParameter("balance");
-// ½«Ç®ÊıµÄ×Ö·û´®×ª»»³ÉË«¾«¶È¸¡µãÊı
+// å°†é’±æ•°çš„å­—ç¬¦ä¸²è½¬æ¢æˆåŒç²¾åº¦æµ®ç‚¹æ•°
 double qian = Double.parseDouble(bal);
-// ¶ÔÈ¡³öµÄÇ®½øĞĞÅĞ¶Ï
+// å¯¹å–å‡ºçš„é’±è¿›è¡Œåˆ¤æ–­
 if (qian < 500)
 {
-	out.println("¸øÄã" + qian + "¿é");
-	out.println("ÕË»§¼õÉÙ" + qian);
+	out.println("ç»™ä½ " + qian + "å—");
+	out.println("è´¦æˆ·å‡å°‘" + qian);
 }
 else
 {
-	// ´´½¨ÁËÒ»¸öList¶ÔÏó
+	// åˆ›å»ºäº†ä¸€ä¸ªListå¯¹è±¡
 	List<String> info = new ArrayList<String>();
 	info.add("1111111");
 	info.add("2222222");
 	info.add("3333333");
-	// ½«info¶ÔÏó·ÅÈërequest·¶Î§ÄÚ
+	// å°†infoå¯¹è±¡æ”¾å…¥requestèŒƒå›´å†…
 	request.setAttribute("info" , info);
 %>
-<!-- ÊµÏÖ×ª·¢ -->
+<!-- å®ç°è½¬å‘ -->
 <jsp:forward page="second.jsp"/>
 <%}%>
 </body>

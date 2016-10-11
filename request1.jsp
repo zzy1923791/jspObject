@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,42 +8,42 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> »ñÈ¡ÇëÇóÍ·/ÇëÇó²ÎÊı </title>
+	<title> è·å–è¯·æ±‚å¤´/è¯·æ±‚å‚æ•° </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// »ñÈ¡ËùÓĞÇëÇóÍ·µÄÃû³Æ
+// è·å–æ‰€æœ‰è¯·æ±‚å¤´çš„åç§°
 Enumeration<String> headerNames = request.getHeaderNames();
 while(headerNames.hasMoreElements())
 {
 	String headerName = headerNames.nextElement();
-	// »ñÈ¡Ã¿¸öÇëÇó¡¢¼°Æä¶ÔÓ¦µÄÖµ
+	// è·å–æ¯ä¸ªè¯·æ±‚ã€åŠå…¶å¯¹åº”çš„å€¼
 	out.println(
 		headerName + "-->" + request.getHeader(headerName) + "<br/>");
 }
 out.println("<hr/>");
-// ÉèÖÃ½âÂë·½Ê½£¬¶ÔÓÚ¼òÌåÖĞÎÄ£¬Ê¹ÓÃGBK½âÂë
-request.setCharacterEncoding("GBK");   // ¢Ù
-// ÏÂÃæÒÀ´Î»ñÈ¡±íµ¥ÓòµÄÖµ
+// è®¾ç½®è§£ç æ–¹å¼ï¼Œå¯¹äºç®€ä½“ä¸­æ–‡ï¼Œä½¿ç”¨GBKè§£ç 
+request.setCharacterEncoding("GBK");   // â‘ 
+// ä¸‹é¢ä¾æ¬¡è·å–è¡¨å•åŸŸçš„å€¼
 String name = request.getParameter("name");
 String gender = request.getParameter("gender");
-// Èç¹ûÄ³¸öÇëÇó²ÎÊıÓĞ¶à¸öÖµ£¬½«Ê¹ÓÃ¸Ã·½·¨»ñÈ¡¶à¸öÖµ
+// å¦‚æœæŸä¸ªè¯·æ±‚å‚æ•°æœ‰å¤šä¸ªå€¼ï¼Œå°†ä½¿ç”¨è¯¥æ–¹æ³•è·å–å¤šä¸ªå€¼
 String[] color = request.getParameterValues("color");
 String national = request.getParameter("country");
 %>
-<!-- ÏÂÃæÒÀ´ÎÊä³ö±íµ¥ÓòµÄÖµ -->
-ÄúµÄÃû×Ö£º<%=name%><hr/>
-ÄúµÄĞÔ±ğ£º<%=gender%><hr/>
-<!-- Êä³ö¸´Ñ¡¿ò»ñÈ¡µÄÊı×éÖµ -->
-ÄúÏ²»¶µÄÑÕÉ«£º<%for(String c : color)
+<!-- ä¸‹é¢ä¾æ¬¡è¾“å‡ºè¡¨å•åŸŸçš„å€¼ -->
+æ‚¨çš„åå­—ï¼š<%=name%><hr/>
+æ‚¨çš„æ€§åˆ«ï¼š<%=gender%><hr/>
+<!-- è¾“å‡ºå¤é€‰æ¡†è·å–çš„æ•°ç»„å€¼ -->
+æ‚¨å–œæ¬¢çš„é¢œè‰²ï¼š<%for(String c : color)
 {out.println(c + " ");}%><hr/>
-ÄúÀ´×ÔµÄ¹ú¼Ò£º<%=national%><hr/>
+æ‚¨æ¥è‡ªçš„å›½å®¶ï¼š<%=national%><hr/>
 </body>
 </html>

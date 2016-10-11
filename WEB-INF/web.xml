@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-	<!-- 配置第一个参数：driver -->
+	<!-- 閰嶇疆绗竴涓弬鏁帮細driver -->
 	<context-param>
 		<param-name>driver</param-name>
 		<param-value>com.mysql.jdbc.Driver</param-value>
 	</context-param>
-	<!-- 配置第二个参数：url -->
+	<!-- 閰嶇疆绗簩涓弬鏁帮細url -->
 	<context-param>
 		<param-name>url</param-name>
 		<param-value>jdbc:mysql://localhost:3307/erp</param-value>
 	</context-param>
-	<!-- 配置第三个参数：user -->
+	<!-- 閰嶇疆绗笁涓弬鏁帮細user -->
 	<context-param>
 		<param-name>user</param-name>
 		<param-value>root</param-value>
 	</context-param>
-	<!-- 配置第四个参数：pass -->
+	<!-- 閰嶇疆绗洓涓弬鏁帮細pass -->
 	<context-param>
 		<param-name>pass</param-name>
 		<param-value>123456</param-value>
@@ -27,23 +27,23 @@
 
 
 	<servlet>
-		<!-- 指定Servlet名字 -->
+		<!-- 鎸囧畾Servlet鍚嶅瓧 -->
 		<servlet-name>config</servlet-name>
-		<!-- 指定将哪个JSP页面配置成Servlet -->
+		<!-- 鎸囧畾灏嗗摢涓狫SP椤甸潰閰嶇疆鎴怱ervlet -->
 		<jsp-file>/configTest2.jsp</jsp-file>
-		<!-- 配置名为name的参数，值为crazyit.org -->
+		<!-- 閰嶇疆鍚嶄负name鐨勫弬鏁帮紝鍊间负crazyit.org -->
 		<init-param>
 			<param-name>name</param-name>
 			<param-value>crazyit.org</param-value>
 		</init-param>
-		<!-- 配置名为age的参数，值为30 -->
+		<!-- 閰嶇疆鍚嶄负age鐨勫弬鏁帮紝鍊间负30 -->
 		<init-param>
 			<param-name>age</param-name>
 			<param-value>30</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<!-- 指定将config Servlet配置到/config URL-->
+		<!-- 鎸囧畾灏哻onfig Servlet閰嶇疆鍒�/config URL-->
 		<servlet-name>config</servlet-name>
 		<url-pattern>/config</url-pattern>
 	</servlet-mapping>

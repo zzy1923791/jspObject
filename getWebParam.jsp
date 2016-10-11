@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,37 +8,37 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>application²âÊÔ</title>
+	<title>applicationæµ‹è¯•</title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-//´ÓÅäÖÃ²ÎÊıÖĞ»ñÈ¡Çı¶¯
+//ä»é…ç½®å‚æ•°ä¸­è·å–é©±åŠ¨
 String driver = application.getInitParameter("driver");
-//´ÓÅäÖÃ²ÎÊıÖĞ»ñÈ¡Êı¾İ¿âurl
+//ä»é…ç½®å‚æ•°ä¸­è·å–æ•°æ®åº“url
 String url = application.getInitParameter("url");
-//´ÓÅäÖÃ²ÎÊıÖĞ»ñÈ¡ÓÃ»§Ãû
+//ä»é…ç½®å‚æ•°ä¸­è·å–ç”¨æˆ·å
 String user = application.getInitParameter("user");
-//´ÓÅäÖÃ²ÎÊıÖĞ»ñÈ¡ÃÜÂë
+//ä»é…ç½®å‚æ•°ä¸­è·å–å¯†ç 
 String pass = application.getInitParameter("pass");
-//×¢²áÇı¶¯
+//æ³¨å†Œé©±åŠ¨
 Class.forName(driver);
-//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+//è·å–æ•°æ®åº“è¿æ¥
 Connection conn = DriverManager.getConnection(url,user,pass);
-//´´½¨Statement¶ÔÏó
+//åˆ›å»ºStatementå¯¹è±¡
 Statement stmt = conn.createStatement();
-//Ö´ĞĞ²éÑ¯
+//æ‰§è¡ŒæŸ¥è¯¢
 ResultSet rs = stmt.executeQuery("select * from cms_stockclearing_instore");
 %>
 <table bgcolor="#9999dd" border="1" width="480">
 <%
-//±éÀú½á¹û¼¯
+//éå†ç»“æœé›†
 while(rs.next())
 {
 %>

@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="GBK"?>
-<!-- ¶¨ÒåÉú³ÉÎÄ¼þµÄproject¸ùÔªËØ£¬Ä¬ÈÏµÄtargetÎª¿Õ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- å®šä¹‰ç”Ÿæˆæ–‡ä»¶çš„projectæ ¹å…ƒç´ ï¼Œé»˜è®¤çš„targetä¸ºç©º -->
 <project name="web" basedir="." default="">
-	<!-- ¶¨ÒåÈý¸ö¼òµ¥ÊôÐÔ -->
+	<!-- å®šä¹‰ä¸‰ä¸ªç®€å•å±žæ€§ -->
 	<property name="src" value="src"/>
 	<property name="classes" value="classes"/>
-	<!-- ¶¨ÒåÒ»×éÎÄ¼þºÍÄ¿Â¼¼¯ -->
+	<!-- å®šä¹‰ä¸€ç»„æ–‡ä»¶å’Œç›®å½•é›† -->
 	<path id="classpath">
 		<fileset dir="lib">
 			<include name="*.jar"/>
 		</fileset>
 		<pathelement path="${classes}"/>
 	</path>
-	<!-- ¶¨Òåcompile target£¬ÓÃÓÚ±àÒëJavaÔ´ÎÄ¼þ -->
-	<target name="compile" description="±àÒëJavaÔ´ÎÄ¼þ">
-		<!-- ÏÈÉ¾³ýclassesÊôÐÔËù´ú±íµÄÎÄ¼þ¼Ð -->
+	<!-- å®šä¹‰compile targetï¼Œç”¨äºŽç¼–è¯‘Javaæºæ–‡ä»¶ -->
+	<target name="compile" description="ç¼–è¯‘Javaæºæ–‡ä»¶">
+		<!-- å…ˆåˆ é™¤classeså±žæ€§æ‰€ä»£è¡¨çš„æ–‡ä»¶å¤¹ -->
 		<delete dir="${classes}"/>
-		<!-- ´´½¨classesÊôÐÔËù´ú±íµÄÎÄ¼þ¼Ð -->
+		<!-- åˆ›å»ºclasseså±žæ€§æ‰€ä»£è¡¨çš„æ–‡ä»¶å¤¹ -->
 		<mkdir dir="${classes}"/>
-		<!-- ±àÒëJavaÎÄ¼þ£¬±àÒëºóµÄclassÎÄ¼þ·Åµ½classesÊôÐÔËù´ú±íµÄÎÄ¼þ¼ÐÄÚ -->
+		<!-- ç¼–è¯‘Javaæ–‡ä»¶ï¼Œç¼–è¯‘åŽçš„classæ–‡ä»¶æ”¾åˆ°classeså±žæ€§æ‰€ä»£è¡¨çš„æ–‡ä»¶å¤¹å†… -->
 		<javac destdir="${classes}" debug="true" includeantruntime="yes"
 			deprecation="false" optimize="false" failonerror="true">
-			<!-- Ö¸¶¨ÐèÒª±àÒëµÄJavaÎÄ¼þËùÔÚµÄÎ»ÖÃ -->
+			<!-- æŒ‡å®šéœ€è¦ç¼–è¯‘çš„Javaæ–‡ä»¶æ‰€åœ¨çš„ä½ç½® -->
 			<src path="${src}"/>
-			<!-- Ö¸¶¨±àÒëJavaÎÄ¼þËùÐèÒªµÚÈý·½Àà¿âËùÔÚµÄÎ»ÖÃ -->
+			<!-- æŒ‡å®šç¼–è¯‘Javaæ–‡ä»¶æ‰€éœ€è¦ç¬¬ä¸‰æ–¹ç±»åº“æ‰€åœ¨çš„ä½ç½® -->
 			<classpath refid="classpath"/>
 		</javac>
 	</target>

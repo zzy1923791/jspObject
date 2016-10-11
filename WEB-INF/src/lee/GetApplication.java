@@ -29,7 +29,7 @@ public class GetApplication extends HttpServlet
 		out.println("????application");
 		out.println("</title></head><body>");
 		ServletContext sc = getServletConfig().getServletContext();
-		out.print("application?§Ö????counter??:");
+		out.print("application?Ðµ????counter??:");
 		out.println(sc.getAttribute("counter"));
 		out.println("</body></html>");
 	}

@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,23 +8,23 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> Ôö¼ÓCookie </title>
+	<title> å¢åŠ Cookie </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// »ñÈ¡ÇëÇó²ÎÊı
+// è·å–è¯·æ±‚å‚æ•°
 String name = request.getParameter("name");
-// ÒÔ»ñÈ¡µ½µÄÇëÇó²ÎÊıÎªÖµ£¬´´½¨Ò»¸öCookie¶ÔÏó
+// ä»¥è·å–åˆ°çš„è¯·æ±‚å‚æ•°ä¸ºå€¼ï¼Œåˆ›å»ºä¸€ä¸ªCookieå¯¹è±¡
 Cookie c = new Cookie("username" , name);
-// ÉèÖÃCookie¶ÔÏóµÄÉú´æÆÚÏŞ
+// è®¾ç½®Cookieå¯¹è±¡çš„ç”Ÿå­˜æœŸé™
 c.setMaxAge(24 * 3600);
-// Ïò¿Í»§¶ËÔö¼ÓCookie¶ÔÏó
+// å‘å®¢æˆ·ç«¯å¢åŠ Cookieå¯¹è±¡
 response.addCookie(c);
 %>
 </body>

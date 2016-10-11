@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,31 +8,31 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> »ñÈ¡°üº¬·ÇÎ÷Å·×Ö·ûµÄGETÇëÇó²ÎÊı </title>
+	<title> è·å–åŒ…å«éè¥¿æ¬§å­—ç¬¦çš„GETè¯·æ±‚å‚æ•° </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// »ñÈ¡ÇëÇóÀï°üº¬µÄ²éÑ¯×Ö·û´®
+// è·å–è¯·æ±‚é‡ŒåŒ…å«çš„æŸ¥è¯¢å­—ç¬¦ä¸²
 String rawQueryStr = request.getQueryString();
-out.println("Ô­Ê¼²éÑ¯×Ö·û´®Îª£º" + rawQueryStr + "<hr/>");
-// Ê¹ÓÃURLDecoder½âÂë×Ö·û´®
+out.println("åŸå§‹æŸ¥è¯¢å­—ç¬¦ä¸²ä¸ºï¼š" + rawQueryStr + "<hr/>");
+// ä½¿ç”¨URLDecoderè§£ç å­—ç¬¦ä¸²
 String queryStr = java.net.URLDecoder.decode(
 	rawQueryStr , "UTF-8");
-out.println("½âÂëºóµÄ²éÑ¯×Ö·û´®Îª£º" + queryStr + "<hr/>");
-// ÒÔ&·ûºÅ·Ö½â²éÑ¯×Ö·û´®
+out.println("è§£ç åçš„æŸ¥è¯¢å­—ç¬¦ä¸²ä¸ºï¼š" + queryStr + "<hr/>");
+// ä»¥&ç¬¦å·åˆ†è§£æŸ¥è¯¢å­—ç¬¦ä¸²
 String[] paramPairs = queryStr.split("&");
 for(String paramPair : paramPairs)
 {
-	out.println("Ã¿¸öÇëÇó²ÎÊıÃû¡¢Öµ¶ÔÎª£º" + paramPair + "<br/>");
-	// ÒÔ=À´·Ö½âÇëÇó²ÎÊıÃûºÍÖµ
+	out.println("æ¯ä¸ªè¯·æ±‚å‚æ•°åã€å€¼å¯¹ä¸ºï¼š" + paramPair + "<br/>");
+	// ä»¥=æ¥åˆ†è§£è¯·æ±‚å‚æ•°åå’Œå€¼
 	String[] nameValue = paramPair.split("=");
-	out.println(nameValue[0] + "²ÎÊıµÄÖµÊÇ£º" + 
+	out.println(nameValue[0] + "å‚æ•°çš„å€¼æ˜¯ï¼š" + 
 		nameValue[1]+ "<hr/>");
 }
 %>

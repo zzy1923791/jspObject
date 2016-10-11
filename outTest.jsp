@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,47 +8,47 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> out²âÊÔ </title>
+	<title> outæµ‹è¯• </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
 <%
-// ×¢²áÊı¾İ¿âÇı¶¯
+// æ³¨å†Œæ•°æ®åº“é©±åŠ¨
 Class.forName("com.mysql.jdbc.Driver");
-// »ñÈ¡Êı¾İ¿âÁ¬½Ó
+// è·å–æ•°æ®åº“è¿æ¥
 Connection conn = DriverManager.getConnection(
 	"jdbc:mysql://localhost:3306/javaee","root","32147");
-// ´´½¨Statement¶ÔÏó
+// åˆ›å»ºStatementå¯¹è±¡
 Statement stmt = conn.createStatement();
-// Ö´ĞĞ²éÑ¯£¬»ñÈ¡ResultSet¶ÔÏó
+// æ‰§è¡ŒæŸ¥è¯¢ï¼Œè·å–ResultSetå¯¹è±¡
 ResultSet rs = stmt.executeQuery("select * from news_inf");
 %>
 <table bgcolor="#9999dd" border="1" width="400">
 <%
-// ±éÀú½á¹û¼¯
+// éå†ç»“æœé›†
 while(rs.next())
 {
-	// Êä³ö±í¸ñĞĞ
+	// è¾“å‡ºè¡¨æ ¼è¡Œ
 	out.println("<tr>");
-	// Êä³ö±í¸ñÁĞ
+	// è¾“å‡ºè¡¨æ ¼åˆ—
 	out.println("<td>");
-	// Êä³ö½á¹û¼¯µÄµÚ¶şÁĞµÄÖµ
+	// è¾“å‡ºç»“æœé›†çš„ç¬¬äºŒåˆ—çš„å€¼
 	out.println(rs.getString(1));
-	// ¹Ø±Õ±í¸ñÁĞ
+	// å…³é—­è¡¨æ ¼åˆ—
 	out.println("</td>");
-	// ¿ªÊ¼±í¸ñÁĞ
+	// å¼€å§‹è¡¨æ ¼åˆ—
 	out.println("<td>");
-	// Êä³ö½á¹û¼¯µÄµÚÈıÁĞµÄÖµ
+	// è¾“å‡ºç»“æœé›†çš„ç¬¬ä¸‰åˆ—çš„å€¼
 	out.println(rs.getString(2));
-	// ¹Ø±Õ±í¸ñÁĞ
+	// å…³é—­è¡¨æ ¼åˆ—
 	out.println("</td>");
-	// ¹Ø±Õ±í¸ñĞĞ
+	// å…³é—­è¡¨æ ¼è¡Œ
 	out.println("</tr>");
 }
 %>

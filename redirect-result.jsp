@@ -1,5 +1,5 @@
 <%--
-ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñJavaÁªÃË</a>
+ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚Javaè”ç›Ÿ</a>
 author  yeeku.H.lee kongyeeku@163.com
 version  1.0
 Copyright (C), 2001-2016, yeeku.H.Lee
@@ -8,16 +8,16 @@ Program Name:
 Date: 
 --%>
 
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title> redirectÄ¿±êÒ³ </title>
+	<title> redirectç›®æ ‡é¡µ </title>
 	<meta name="website" content="http://www.crazyit.org" />
 </head>
 <body>
-<h3>±»ÖØ¶¨ÏòµÄÄ¿±êÒ³</h3>
-nameÇëÇó²ÎÊıµÄÖµ£º<%=request.getParameter("name")%>
+<h3>è¢«é‡å®šå‘çš„ç›®æ ‡é¡µ</h3>
+nameè¯·æ±‚å‚æ•°çš„å€¼ï¼š<%=request.getParameter("name")%>
 </body>
 </html>
